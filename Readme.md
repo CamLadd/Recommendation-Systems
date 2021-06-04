@@ -14,6 +14,7 @@ Using this data, the goal of this project is to create both a Collaborative and 
 This dataset was very clean and well organized, with zero missing values. In order to conduct proper visualizations, several different subsets were created in order to construct the visualizations you see in this report. In the notebook, those subsets are clearly defined in the cell before the visualizations. Genres had to be extracted using the str.split() function, and then a loop was used to calculate the number of occurences, with the calculated values being placed in a dictionary called "dic". A new column, "Year of Publication" was created for clarity for visualizations. For the content-based model, a merge between the "tags" and  "movies" was necessary, and in order for the merge to not have any duplicates, those duplicates had to be dropped. The DataFrames were merged on the "movieId" column. Another column was created in the content-based filtering DataFrame that combined all the attributes of the movies given (genres and tags).
 
 # Visualizations
+![image](EDA.png)
 
 Using these visualizations, we can make several conclusions concerning the data!
 1. Most movies in this dataset were made around the year 2000. 
