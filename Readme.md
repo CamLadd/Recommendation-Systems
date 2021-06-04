@@ -127,6 +127,34 @@ def recommended_movies(user_ratings,movie_title_df,n):
 recommended_movies(ranked_movies,movies.reset_index(),5)
 ~~~
 You must change the first value in the j.predict() part of the for loop to change the user that the recommendation system is targeting with its recommendations.
+
+### Content-Based Recommendations
+["Bug's Life, A (1998)",
+ 'Toy Story 2 (1999)',
+ 'Sintel (2010)',
+ 'Up (2009)',
+ 'Jumanji (1995)',
+ 'Chronicles of Narnia: Prince Caspian, The (2008)',
+ 'Watership Down (1978)',
+ 'Cat Returns, The (Neko no ongaeshi) (2002)',
+ "Kiki's Delivery Service (Majo no takkyûbin) (1989)",
+ 'Alice in Wonderland (1951)',
+ 'Sinbad: Legend of the Seven Seas (2003)',
+ 'Who Framed Roger Rabbit? (1988)',
+ 'Finding Nemo (2003)',
+ 'Croods, The (2013)',
+ 'The Lego Movie (2014)']
+### Collaborative Recommendations
+277    Shawshank Redemption, The (1994)
+Name: title, dtype: object
+841    Streetcar Named Desire, A (1951)
+Name: title, dtype: object
+906    Lawrence of Arabia (1962)
+Name: title, dtype: object
+602    Dr. Strangelove or: How I Learned to Stop Worr...
+Name: title, dtype: object
+680    Philadelphia Story, The (1940)
+Name: title, dtype: object
 # Future Plans
 
 A good idea would be to put these recommendation systems into a streamlined app that allows for easy use. At the current moment, it is all functions, which to the layman could be very hard to navigate. Furthermore, the bigger datasets could be using applying the same logic as we did to the smaller datasets, potentially resulting in a more robust model.
