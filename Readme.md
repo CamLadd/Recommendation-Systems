@@ -145,16 +145,13 @@ You must change the first value in the j.predict() part of the for loop to chang
  'Croods, The (2013)',
  'The Lego Movie (2014)']
 ### Collaborative Recommendations
-277    Shawshank Redemption, The (1994)
-Name: title, dtype: object
-841    Streetcar Named Desire, A (1951)
-Name: title, dtype: object
-906    Lawrence of Arabia (1962)
-Name: title, dtype: object
-602    Dr. Strangelove or: How I Learned to Stop Worr...
-Name: title, dtype: object
-680    Philadelphia Story, The (1940)
-Name: title, dtype: object
+<br>
+1. Shawshank Redemption, The (1994)
+2. Streetcar Named Desire, A (1951)
+3. Lawrence of Arabia (1962)
+4. Dr. Strangelove or: How I Learned to Stop Worr...
+5. Philadelphia Story, The (1940)
+   
 # Future Plans
 
 A good idea would be to put these recommendation systems into a streamlined app that allows for easy use. At the current moment, it is all functions, which to the layman could be very hard to navigate. Furthermore, the bigger datasets could be using applying the same logic as we did to the smaller datasets, potentially resulting in a more robust model.
