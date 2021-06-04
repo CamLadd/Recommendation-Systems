@@ -75,6 +75,7 @@ So if there were 5 movies that a person had not seen yet, and the recommendation
 
 SVD++ was used to reduce the movies in the dataset to their latent features. Using those latent features, a recommendation system was created that predicts movies that a user may like depending on the similarity between the values calculated by SVD++
 
+![image](collab_filtering_proscons.png)
 ### Content-Based
 
 With content-based filtering algorithms, you are given user's preferences, and then using those preferences, you identify items that relate most closely to the attributes of the preferred items.
@@ -101,6 +102,7 @@ For our recommendation system, we will not have to use the "tags" DataFrame that
 
 TFIDF was used to assign TFIDF scores to all of the attributes of the movies, and a similarity matrix was constructed in order to create a recommendation system. The recommendation system is in the form of a function.
 
+![image](content_proscons.png)
 # Conclusion
 
 When constructing recommendation systems for the MovieLens dataset, TFIDF was used to create the Content-Based Recommendation System, and SDV++ was used to create the Collaborative Recommendation System. 
@@ -133,23 +135,13 @@ recommended_movies(ranked_movies,movies.reset_index(),5)
 ~~~
 You must change the first value in the j.predict() part of the for loop to change the user that the recommendation system is targeting with its recommendations.
 
-### Content-Based Recommendations
-["Bug's Life, A (1998)",
- 'Toy Story 2 (1999)',
- 'Sintel (2010)',
- 'Up (2009)',
- 'Jumanji (1995)',
- 'Chronicles of Narnia: Prince Caspian, The (2008)',
- 'Watership Down (1978)',
- 'Cat Returns, The (Neko no ongaeshi) (2002)',
- "Kiki's Delivery Service (Majo no takkyûbin) (1989)",
- 'Alice in Wonderland (1951)',
- 'Sinbad: Legend of the Seven Seas (2003)',
- 'Who Framed Roger Rabbit? (1988)',
- 'Finding Nemo (2003)',
- 'Croods, The (2013)',
- 'The Lego Movie (2014)']
-### Collaborative Recommendations
+### Content-Based Top 5 Recommendations (Toy Story (1995))
+1. "Bug's Life, A (1998)",
+2. 'Toy Story 2 (1999)',
+3. 'Sintel (2010)',
+4. 'Up (2009)',
+5. 'Jumanji (1995)'
+### Collaborative Top 5 Recommendations (User 1000)
 <br>
 
 1. Shawshank Redemption, The (1994)
