@@ -52,6 +52,10 @@ CoClustering - "Where classical clustering methods assume that a membership of a
 <br>
 <br>
 
+![image](comparisons.png)
+
+The model with the lowest RMSE is SVD++, so we will use that for our collaborative filtering!
+
 - Recommendation systems are one of the most useful applications of machine learning. Using either collaborative or content-based filtering methods, someone who implements one of these models can determine what products to suggest to a customer or viewer of content.
 
 - Recommendation systems are everywehere! Almost everyone who involves themself in some aspect of the digital world used recommendation systems consistently without even knowing it.
