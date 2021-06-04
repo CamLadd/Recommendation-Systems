@@ -1,3 +1,5 @@
+# MovieLens Recommendation System
+-Cameron T. Ladd
 # Data
 <br>
 This data is collected from the MovieLens dataset, which is created and curated by a research lab known as Grouplens Research. Grouplens Research is associated with the equally named website "Grouplens", which describes itself as 'a web site that helps people find movies to watch." 
