@@ -1,6 +1,9 @@
 # MovieLens Recommendation System
+
 -Cameron T. Ladd
+
 # Data
+
 <br>
 This data is collected from the MovieLens dataset, which is created and curated by a research lab known as Grouplens Research. Grouplens Research is associated with the equally named website "Grouplens", which describes itself as 'a web site that helps people find movies to watch." 
 <hr>
@@ -8,17 +11,21 @@ The data is composed of 100,000 ratings and 3,600 tag applications applied to 9,
 The data files used are the 'movies.csv, 'ratings.csv', and 'tags.csv' from the "Small" version of the dataset.
 
 # Goal
+
 <br>
 Using this data, the goal of this project is to create both a Collaborative and Content-based recommender system. 
 
 # Data Cleaning and Manipulation
+
 <br>
 This dataset was very clean and well organized, with zero missing values. In order to conduct proper visualizations, several different subsets were created in order to construct the visualizations you see in this report. In the notebook, those subsets are clearly defined in the cell before the visualizations. Genres had to be extracted using the str.split() function, and then a loop was used to calculate the number of occurences, with the calculated values being placed in a dictionary called "dic". A new column, "Year of Publication" was created for clarity for visualizations. For the content-based model, a merge between the "tags" and  "movies" was necessary, and in order for the merge to not have any duplicates, those duplicates had to be dropped. The DataFrames were merged on the "movieId" column. Another column was created in the content-based filtering DataFrame that combined all the attributes of the movies given (genres and tags).
 
 # Visualizations
+
 ![image](EDA.png)
 
 Using these visualizations, we can make several conclusions concerning the data!
+
 1. Most movies in this dataset were made around the year 2000. 
 2. The three most frequent genres are drama, comedy, and action. There are no surprises there, as Western films tend to lean towards these highly successful genre choices. 
 3. Most of the movies were rate at a 3 or a 4. Many less movies were rated between 0.5 and 2.5, which potentially indicates that this dataset had a decent selection of movies!
@@ -78,6 +85,7 @@ So if there were 5 movies that a person had not seen yet, and the recommendation
 SVD++ was used to reduce the movies in the dataset to their latent features. Using those latent features, a recommendation system was created that predicts movies that a user may like depending on the similarity between the values calculated by SVD++
 
 ![image](collab_filtering_proscons.png)
+
 ### Content-Based
 
 With content-based filtering algorithms, you are given user's preferences, and then using those preferences, you identify items that relate most closely to the attributes of the preferred items.
@@ -105,6 +113,7 @@ For our recommendation system, we will not have to use the "tags" DataFrame that
 TFIDF was used to assign TFIDF scores to all of the attributes of the movies, and a similarity matrix was constructed in order to create a recommendation system. The recommendation system is in the form of a function.
 
 ![image](content_proscons.png)
+
 # Conclusion
 
 When constructing recommendation systems for the MovieLens dataset, TFIDF was used to create the Content-Based Recommendation System, and SDV++ was used to create the Collaborative Recommendation System. 
@@ -138,12 +147,15 @@ recommended_movies(ranked_movies,movies.reset_index(),5)
 You must change the first value in the j.predict() part of the for loop to change the user that the recommendation system is targeting with its recommendations.
 
 ### Content-Based Top 5 Recommendations (Toy Story (1995))
+
 1. "Bug's Life, A (1998)",
 2. 'Toy Story 2 (1999)',
 3. 'Sintel (2010)',
 4. 'Up (2009)',
 5. 'Jumanji (1995)'
+
 ### Collaborative Top 5 Recommendations (User 1000)
+
 <br>
 
 1. Shawshank Redemption, The (1994)
@@ -151,7 +163,7 @@ You must change the first value in the j.predict() part of the for loop to chang
 3. Lawrence of Arabia (1962)
 4. Dr. Strangelove or: How I Learned to Stop Worr...
 5. Philadelphia Story, The (1940)
-   
+
 # Future Plans
 
 A good idea would be to put these recommendation systems into a streamlined app that allows for easy use. At the current moment, it is all functions, which to the layman could be very hard to navigate. Furthermore, the bigger datasets could be using applying the same logic as we did to the smaller datasets, potentially resulting in a more robust model.
