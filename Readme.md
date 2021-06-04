@@ -95,3 +95,38 @@ For our recommendation system, we will not have to use the "tags" DataFrame that
 <br>
 
 TFIDF was used to assign TFIDF scores to all of the attributes of the movies, and a similarity matrix was constructed in order to create a recommendation system. The recommendation system is in the form of a function.
+
+# Conclusion
+
+When constructing recommendation systems for the MovieLens dataset, TFIDF was used to create the Content-Based Recommendation System, and SDV++ was used to create the Collaborative Recommendation System. 
+<br>
+
+The function for the Content-Based Recommendation System is:
+<br>
+
+recommend(movie title, desired number of recommendations)
+
+The function for the Collaborative Recommendation System is:
+
+~~~
+list_of_movies = []
+for m_id in movies.reset_index()['movieId'].unique():
+    list_of_movies.append((m_id, j.predict(1000,m_id)[3]))
+# order the predictions from highest to lowest rated
+ranked_movies = sorted(list_of_movies, key=lambda x:x[1], reverse=True)
+
+# return the top n recommendations using the 
+def recommended_movies(user_ratings,movie_title_df,n):
+        for idx, rec in enumerate(user_ratings):
+            title = movie_title_df.loc[movies.reset_index()['movieId'] == int(rec[0])]['title']
+            print(title)
+            n-= 1
+            if n == 0:
+                break
+            
+recommended_movies(ranked_movies,movies.reset_index(),5)
+~~~
+You must change the first value in the j.predict() part of the for loop to change the user that the recommendation system is targeting with its recommendations.
+# Future Plans
+
+A good idea would be to put these recommendation systems into a streamlined app that allows for easy use. At the current moment, it is all functions, which to the layman could be very hard to navigate. Furthermore, the bigger datasets could be using applying the same logic as we did to the smaller datasets, potentially resulting in a more robust model.
