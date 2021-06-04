@@ -146,6 +146,7 @@ You must change the first value in the j.predict() part of the for loop to chang
  'The Lego Movie (2014)']
 ### Collaborative Recommendations
 <br>
+
 1. Shawshank Redemption, The (1994)
 2. Streetcar Named Desire, A (1951)
 3. Lawrence of Arabia (1962)
