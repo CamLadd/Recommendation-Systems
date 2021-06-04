@@ -133,7 +133,7 @@ for m_id in movies.reset_index()['movieId'].unique():
 # order the predictions from highest to lowest rated
 ranked_movies = sorted(list_of_movies, key=lambda x:x[1], reverse=True)
 
-# return the top n recommendations using the 
+
 def recommended_movies(user_ratings,movie_title_df,n):
         for idx, rec in enumerate(user_ratings):
             title = movie_title_df.loc[movies.reset_index()['movieId'] == int(rec[0])]['title']
